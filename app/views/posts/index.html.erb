@@ -1,11 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>게시판</h1>
+<%= link_to '홈', posts_path %>
+<%= link_to '채팅', chats_path %>
+<%= link_to '나의 당근', new_post_path %>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>title</th>
       <th>Content</th>
       <th colspan="3"></th>
     </tr>

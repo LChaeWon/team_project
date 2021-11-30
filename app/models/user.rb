@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 	
-  belongs_to :posts
+  belongs_to :posts 
+	
   has_many :likes, dependent: :destroy
   has_many :liked_posts, through: :likes, source: :post
 	

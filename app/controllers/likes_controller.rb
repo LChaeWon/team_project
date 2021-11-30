@@ -10,5 +10,6 @@ class LikesController < ApplicationController
   end
     
   redirect_to :posts
+	
  end
 end

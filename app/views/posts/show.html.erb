@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>상품:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>가격:</strong>
   <%= @post.content %>
 </p>
+
  
 <p>
-  <strong>Like:</strong>
-  <%= @post.likes.size %> 명이 좋아합니다. 
+  <strong>찜:</strong>
+  <%= @post.likes.size %> 명이 찜 했습니다. 
 </p>
  
 <p>
   <% if current_user.is_like? (@post) %>
   <form action='/post/<%= @post.id%>/like' method='post'>
-  <button> 좋아요 취소 </button>  
+  <button> 찜 취소 </button>  
   </form>
   
   <% else %>
   <form action='/post/<%= @post.id%>/like' method='post'>
-  <button> 좋아요</button>  
+  <button> 찜 </button>  
   </form>
   
   <% end %>

@@ -9,7 +9,7 @@ class LikesController < ApplicationController
  
   end
     
-  redirect_to :posts
+  redirect_to @post = Post.find(params[:post_id])
 	
  end
 end

@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+	
+	
+	resources :posts do
+  collection do
+    get :search
+  end
+end
+  get 'posts/search' => 'posts#search'
+	
+	
+
   resources :posts
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -6,4 +17,6 @@ Rails.application.routes.draw do
 root 'posts#index'
 post 'post/:post_id/like' => 'likes#like_toggle'
 get 'users/sign_out'
+
+
 end

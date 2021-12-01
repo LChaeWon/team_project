@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.4'
 #gem 'sqlite3', '~> 1.4'
 gem 'pg'
 gem 'devise'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

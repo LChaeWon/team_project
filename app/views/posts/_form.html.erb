@@ -12,12 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :상품명 %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :가격 %>
+    <%= form.text_area :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :'상품 설명' %>
     <%= form.text_area :content %>
   </div>
 

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>상품:</strong>
+  <strong>닉네임:</strong>
   <%= @post.title %>
 </p>
 
@@ -10,10 +10,16 @@
   <%= @post.price %>
 </p>
 
+<p>
+  <strong>상품 설명:</strong>
+  <%= @post.content %>
+</p>
+
+
  
 <p>
   <strong>찜:</strong>
-  <%= @post.likes.size %> 명이 찜 했습니다. 
+  <%= @post.likes.size %> 명이 찜했습니다. 
 </p>
  
 <p>

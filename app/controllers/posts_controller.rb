@@ -1,19 +1,10 @@
 class PostsController < ApplicationController
-	
-	def search
- 	 @posts = Post.search do
-   	 keywords params[:query]
-  	end.results
-  
-  		respond_to do |format|
-    	format.html { render :action => "index" }
-    	format.xml  { render :xml => @posts }
- 		 end
-		end
 
 	before_action :set_post, only: %i[ show edit update destroy]
   before_action :is_author?, only: [:edit, :update, :destroy]
 
+	
+	
   # GET /posts or /posts.json
   def index
     @posts = Post.all

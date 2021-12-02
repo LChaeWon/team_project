@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-	
-	
-	resources :posts do
-  collection do
-    get :search
-  end
-end
-  get 'posts/search' => 'posts#search'
-	
+		
 	
 
   resources :posts

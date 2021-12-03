@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 		
 	
 
+  resources :room_messages
+  resources :rooms
   get 'searches/result'
   resources :posts
   devise_for :users

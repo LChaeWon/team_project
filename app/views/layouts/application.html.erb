@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoormRailsApp</title>
+    <title>당근 마켓</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
+
   <body>
-	<div>
-	<% if user_signed_in? %>
-		   <%= link_to "회원정보", edit_user_registration_path %> |
-		   <%= link_to "로그아웃", destroy_user_session_path, method: :delete %> |
-		   아이디 : <%= current_user.email %>
-		   유저 No. : <%= current_user.id %>
-	<% else %>
-		   <%= link_to "로그인", user_session_path %> 
-		   <%= link_to "회원가입", "/users/sign_up" %> 
-	<% end %>
-	  </div>
-	  <hr/>
-	  
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <%= render partial: 'shared/navigation_bar' %>
+          <div class="my-3">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
-

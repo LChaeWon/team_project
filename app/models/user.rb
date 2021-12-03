@@ -12,4 +12,10 @@ class User < ApplicationRecord
 	def is_like? (post)
 		Like.find_by(user_id: self.id, post_id: post.id).present?
 	end
+	
+	def gravatar_url
+  gravatar_id = Digest::MD5::hexdigest(email).downcase
+  "https://gravatar.com/avatar/#{gravatar_id}.png"
+end
+	
 end

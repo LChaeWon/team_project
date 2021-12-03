@@ -70,14 +70,15 @@ class PostsController < ApplicationController
 	
 
     # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :content, :price)
-    end
 	
 	def is_author?
     redirect_to root_path unless @post.user == current_user
 	end
 	
+
+    def post_params
+      params.require(:post).permit(:title, :content, :price)
+    end
 	
 	
 	

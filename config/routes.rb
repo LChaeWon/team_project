@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 		
 	
 
-  resources :room_messages
-  resources :rooms
-  get 'searches/result'
+
   resources :posts
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -12,8 +10,10 @@ Rails.application.routes.draw do
 root 'posts#index'
 post 'post/:post_id/like' => 'likes#like_toggle'
 get 'users/sign_out'
+  get 'searches/result'
 
-
+  resources :room_messages
+  resources :rooms
 
 
 end

@@ -8,6 +8,9 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+	  unless user_signed_in?
+    redirect_to '/users/sign_in'
+  end
   end
 
   # GET /posts/1 or /posts/1.json

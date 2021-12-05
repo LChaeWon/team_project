@@ -1,10 +1,41 @@
-<h1>검색 결과</h1>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 
-<div class="container">
-    <% @searches.each do |x| %>
-        <%= link_to x.title, "/posts/#{x.id}" %>　|　<%= content_tag(:span, truncate( raw( sanitize(x.content, :tags => %w(table tr td), :attributes => %w(id class style) ) ), :length => 70, :omission => "...")) %>　|　<%= x.created_at.in_time_zone("Asia/Seoul").strftime('%Y-%m-%d %H:%M') %>
-	<%= link_to '돌아가기', posts_path %>
-        <hr/>
-    <% end %>
+
+
+<div class="container py-3">
+
+	<h1>
+		검색 결과
+	</h1>
+		  
+	  
+<div class="row pb-5 mb-4">
+	
+<% @searches.each do |x| %>
+	
+	
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-4">
+      <!-- Card-->
+		
+		
+		
+		
+      <div class="card rounded shadow-sm border-0">
+        <div class="card-body p-4"><img src="<%= x.image %>" alt="" class="img-fluid d-block mx-auto mb-3">
+		
+          <h5> <a href="#" class="text-dark"><%= link_to x.title, "/posts/#{x.id}" %></a></h5>
+          <p class="small text-muted font-italic"><%= x.price %>원　　　　　　　　　　　　</p>
+				<i class="fa fa-heart" ></i>　<%= x.likes.size %>
+			</p>
+          
+        </div>
+      </div>
+
+		
+    </div>
+  <% end %>
+    
+
 </div>
- 
+	
+	

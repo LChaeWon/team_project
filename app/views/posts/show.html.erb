@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<p>
+    <strong>사진:</strong>
+    <%= image_tag("#{@post.image}") %>
+</p>
 
 <p>
   <strong>상품명:</strong>
@@ -40,3 +44,8 @@
 
 
 <%= link_to '채팅', new_room_path %>
+
+<%= link_to '수정', edit_post_path(@post) %>
+<%= link_to '삭제', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+

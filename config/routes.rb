@@ -14,6 +14,12 @@ get 'users/sign_out'
 
   resources :room_messages
   resources :rooms
+get  'info/index'
+	get  'info/mypost'
+			get  'info/mylike'
+
+	
+
 
 
 end

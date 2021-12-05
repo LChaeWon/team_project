@@ -1,0 +1,27 @@
+
+
+
+
+<div class="container border py-3 my-3">
+   <div class="d-flex">
+	　
+    <div class="flex-shrink-0">
+<img src = "https://cdn-icons-png.flaticon.com/512/1626/1626708.png" height=30px width=40px>    </div>
+    <div class="flex-grow-1 ms-3">
+        <h4><%= current_user.nickname %><small class="text-muted"><i>지역 넣기</i></small></h4>
+		
+				 <span class="badge rounded-pill bg-warning text-dark" ><%= link_to "회원정보 수정", edit_user_registration_path %> </span>
+
+		
+    </div>
+</div>
+</div>
+
+
+
+<ul class="list-group w-auto text-center">
+<li class="list-group-item"><h2><%= link_to "　　　　　　　　　　　　　　　판매내역　　　　　　　　　　　　　　　",  info_mypost_path %></h2></li>
+<li class="list-group-item"><h2><%= link_to "　　　　　　　　　　　　　　　구매내역　　　　　　　　　　　　　　　",  info_mypost_path %></h2></li>
+	<li class="list-group-item"><h2><%= link_to "　　　　　　　　　　　　　　　관심목록　　　　　　　　　　　　　　　",  info_mypost_path %></h2></li>
+	
+  

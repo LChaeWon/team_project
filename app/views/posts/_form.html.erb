@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= form.label :사진 %><br>
+    <%= form.file_field :image, accept: 'image/png,image/gif,image/jpeg' %>
+</div>
   <div class="field">
     <%= form.label :상품명 %>
     <%= form.text_field :title %>

@@ -17,7 +17,7 @@ get 'users/sign_out'
 get  'info/index'
 	get  'info/mypost'
 			get  'info/mylike'
-
+get 'rooms/destroy'
 	
 
 

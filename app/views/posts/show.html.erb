@@ -1,51 +1,68 @@
-<p id="notice"><%= notice %></p>
-<p>
-    <strong>사진:</strong>
+
+	  <div class="row">
+    <div class="col-6"><p>
+    <strong></strong>
     <%= image_tag("#{@post.image}") %>
-</p>
-
-<p>
-  <strong>상품명:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>가격:</strong>
-  <%= @post.price %>
-</p>
-
-<p>
-  <strong>상품 설명:</strong>
-  <%= @post.content %>
-</p>
-
-
+</p></div>
+    <div class="col-6"> 
+  <strong><h2>
+	  　　　　　　　　　　　　　　　<span class="badge rounded-pill bg-secondary text-light">상품명</span>
+	  <%= @post.title %></strong></h2>
+  
+		<strong><h2>
+	  <span class="badge rounded-pill bg-secondary text-light">가격</span>
+	  　<%= @post.price %>원</strong></h2>
+		
+		
+			<strong><h2>
+	  <span class="badge rounded-pill bg-secondary text-light">상품 설명</span>
+	  <%= @post.content %></strong></h2>
+		
+		
+		
+<h2>　</h2>
+		
+	
+		
  
-<p>
-  <strong>찜:</strong>
-  <%= @post.likes.size %> 명이 찜했습니다. 
-</p>
- 
-<p>
   <% if current_user.is_like? (@post) %>
   <form action='/post/<%= @post.id%>/like' method='post'>
-  <button> 찜 취소 </button>  
+  <button><i class="fa fa-heart" aria-hidden="true"></i>　<%= @post.likes.size %></button>
+  
   </form>
   
   <% else %>
   <form action='/post/<%= @post.id%>/like' method='post'>
-  <button> 찜 </button>  
+  <button><i class="fa fa-heart-o" aria-hidden="true"></i>　<%= @post.likes.size %></button>  
   </form>
   
   <% end %>
-</p>
+				<h2>　</h2>
 
-<%= link_to '뒤로 가기', posts_path %>
+	<button type="button" class="btn btn-outline-secondary"><%= link_to '채팅', new_room_path %>
+</button>		
+		  
+	 
+		   <button type="button" class="btn btn-outline-secondary"><%= link_to '수정', edit_post_path(@post) %>
+</button> 
+		     <button type="button" class="btn btn-outline-secondary"><%= link_to '삭제', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</button> 
+		  
+			<button type="button" class="btn btn-outline-secondary"><%= link_to '뒤로 가기', posts_path %></button>
 
 
-<%= link_to '채팅', new_room_path %>
+		
+		
+		
+		
+  </div>
+		  	
+  </div>
 
-<%= link_to '수정', edit_post_path(@post) %>
-<%= link_to '삭제', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 
+
+
+
+ 

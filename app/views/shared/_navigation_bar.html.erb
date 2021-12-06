@@ -14,13 +14,15 @@
 <i class="fa fa-comments" aria-hidden="true"></i>　
 <%= link_to '채팅', rooms_path %>　　　
 <i class="fa fa-user" aria-hidden="true"></i>　
-<%= link_to '나의 당근', info_index_path %>　 　　　　    　
+<%= link_to '나의 당근', info_index_path %>　 　　　　    
 	<div>
 	<% if user_signed_in? %>
 		　　　　
 		   <%= current_user.email %>
 		  </div>
         <img src = "https://cdn-icons-png.flaticon.com/512/1626/1626708.png" height=30px width=40px>
+
+	
         <%= current_user.nickname %>　
 		 <span class="badge badge-primary even-larger-badge bg-light text-dark" ><%= link_to "로그아웃", destroy_user_session_path, method: :delete %> </span>
 

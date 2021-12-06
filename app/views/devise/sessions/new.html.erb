@@ -4,22 +4,22 @@
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		 <img src = "http://www.dailymedi.com/wys2/file_attach/2021/09/10/1631243542-71.png" height=40px width=140px class="rounded mx-auto d-block">
 		　
+	
 <div class="field">
-    <%= f.label :이메일 %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    　　　<%= f.label :이메일 %><br />
+    　　　<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :비밀번호 %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    　　　<%= f.label :비밀번호 %><br />
+    　　　<%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
 	
-	
 <% if devise_mapping.rememberable? %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :'아이디 기억' %>
+  　    　　<%= f.check_box :remember_me %>
+<%= f.label :'아이디 기억' %>
     </div>
   <% end %>
 

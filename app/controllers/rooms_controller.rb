@@ -28,7 +28,14 @@ end
     end
   end
 
-
+  def destroy
+    @room.destroy
+    respond_to do |format|
+      format.html { redirect_to rooms_url }
+      format.json { head :no_content }
+    end
+  end
+	
 	
 	
 	

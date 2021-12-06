@@ -1,48 +1,62 @@
-<h2>회원가입</h2>
 
+<div class="login-form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	<img src = "http://www.dailymedi.com/wys2/file_attach/2021/09/10/1631243542-71.png" height=40px width=140px class="rounded mx-auto d-block">
+		　
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :이메일 %><br />
-    <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
+    　　　<%= f.label :이메일 %><br />
+    　　　<%= f.text_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :비밀번호 %>
+   　　　<%= f.label :비밀번호 %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %>글자 이상)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+   　　　<%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :'비밀번호 확인' %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    　　　<%= f.label :'비밀번호 확인' %><br />
+    　　　<%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
  <div class="field">
-    <%= f.label :닉네임 %><br />
-    <%= f.text_field :nickname, autofocus: true %>
+    　　　<%= f.label :닉네임 %><br />
+    　　　<%= f.text_field :nickname, autofocus: true %>
   </div>
 
  <div class="field">
-    <%= f.label :주소 %><br />
-    <%= f.text_field :address, autofocus: true %>
+    　　　<%= f.label :주소 %><br />
+    　　　<%= f.text_field :address, autofocus: true %>
   </div>
 
  <div class="field">
-    <%= f.label :전화번호 %><br />
-    <%= f.text_field :phone, autofocus: true %>
+    　　　<%= f.label :'활동지역' %><br />
+    　　　<%= f.text_field :area, autofocus: true %>
   </div>
 
-<input type="radio" name="gender" value="man">남
+
+ <div class="field">
+    　　　<%= f.label :전화번호 %><br />
+    　　　<%= f.text_field :phone, autofocus: true %>
+  </div>
+
+　　　<input type="radio" name="gender" value="man">남
 <input type="radio" name="gender" value="woman">여
 
 
+ <div class="actions">
+	 　 <button type="submit" class="btn1 btn-primary btn-block">가입</button>
+  </div>
+	
+	
 
-  <div class="actions">
-<%= f.submit "가입" %>  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+	  </div>
+
+
+

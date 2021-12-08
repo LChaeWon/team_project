@@ -18,6 +18,10 @@ get  'info/index'
 	get  'info/mypost'
 			get  'info/mylike'
 get 'rooms/destroy'
+	get 'info/mybuy'
+get 'info/myint'
+get 'info/mycomment'
+get 'info/myinfo'
 	
 
 

@@ -1,0 +1,72 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				　<img src="/logo.png" height=35px width=125px alt="image"/>
+				<strong><h3 class="text-muted font-weight-bold text-center">회원정보</h3></strong>
+								<strong><h3 class="text-muted font-weight-bold text-center">조회</h3></strong>
+
+				
+				
+				
+				<h4>　　　　　　　　　　　　　　　　　　　</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">이메일</label>
+				 
+					<div class="alert alert-light border-dark" role="alert">
+ <%= current_user.email %>
+</div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">닉네임</label>
+				 <div class="alert alert-light border-dark" role="alert">
+ <%= current_user.nickname %>
+</div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="email">주소</label>
+				  <div class="alert alert-light border-dark" role="alert">
+ <%= current_user.address %>
+</div>
+					
+			<div class="form-group">
+				  <label class="control-label col-sm-3" for="fname">활동지역</label>
+				 
+					<div class="alert alert-light border-dark" role="alert">
+ <%= current_user.area %>
+</div>
+				
+				
+				<div class="form-group">
+				  <label class="control-label col-sm-3" for="fname">전화번호</label>
+				 
+					<div class="alert alert-light border-dark" role="alert">
+ <%= current_user.phone %>
+</div>
+					
+					
+
+				</div>
+				</div>
+				
+				
+				
+				</div>		
+					
+					
+					
+				</div>
+						
+			</div>
+		</div>
+	</div>
+</div>

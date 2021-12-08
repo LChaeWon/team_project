@@ -1,18 +1,33 @@
+
+
+
+
 <div class="mb-3">
-  <%= link_to new_room_path, class: 'btn btn-primary' do %>
-    Create a room
-  <% end %>
+  <span class="badge badge-primary even-larger-badge bg-light text-dark" >채팅방 목록</span>
+    
 </div>
 
 <% if @rooms.present? %>
   <nav class="nav flex-column">
     <% @rooms.each do |room| %>
       <%= link_to room.name, room_path(room), class: 'nav-link room-nav-link' %>
+	  
 
+	  
+
+	  
+	   <button type="button" class="btn btn-outline-secondary"><%= link_to '삭제', @room, method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
+
+</button> 
+	  
+	  
     <% end %>
   </nav>
 <% else %>
   <div class="text-muted">
-    The are no rooms
+   
   </div>
+	
 <% end %>
+
+

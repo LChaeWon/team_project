@@ -45,16 +45,17 @@
 	 
 		   <button type="button" class="btn btn-outline-secondary"><%= link_to '수정', edit_post_path(@post) %>
 </button> 
-		     <button type="button" class="btn btn-outline-secondary"><%= link_to '삭제', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+		    	  
+	   <button type="button" class="btn btn-outline-secondary"><%= link_to '삭제', @post, method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %>
 
 </button> 
+	  
 		  
 			<button type="button" class="btn btn-outline-secondary"><%= link_to '뒤로 가기', posts_path %></button>
 
 
 		
-		
-		
+
 		
   </div>
 		  	

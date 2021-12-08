@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+
+<div class="container py-3">
+ 
+
+	
+	
+	<div class="row">
+    <div class="col-4"> 
+		
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+
+	 	</div>
+    <div class="col-4"><h1 class="display-4 font-weight-bold">　<img src = "/myint.PNG"><h1></div>
+    <div class="col-4"></div>
+		
+  </div>
+	
+	
+	　
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+<div class="row pb-5 mb-4">
+	
+	
+ <% @my_inter.each do |inter_list| %>
+	
+	
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-4">
+      <!-- Card-->
+		
+      <div class="card rounded shadow-sm border-0">
+        <div class="card-body p-4"><img src="<%=inter_list.image %>" alt="" class="img-fluid d-block mx-auto mb-3">
+		
+          <h5> <a href="#" class="text-dark"><%= link_to inter_list.title, "/posts/#{inter_list.id}" %></a></h5>
+          <p class="small text-muted font-italic"><%= inter_list.price %>원　　　　　　　　　　　　</p>
+				<i class="fa fa-heart" ></i>　<%= inter_list.likes.size %>
+			</p>
+          
+        </div>
+      </div>
+
+		
+    </div>
+  <% end %>
+    
+
+</div>
+	

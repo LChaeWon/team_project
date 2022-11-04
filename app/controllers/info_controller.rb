@@ -13,7 +13,6 @@ end
 	
 def myint
 	@my_inter = current_user.liked_posts
-	
 end
 	
 def mycommet
